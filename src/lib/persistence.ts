@@ -1,9 +1,9 @@
 import type { SavedScenario } from '@/store/scenario';
 
 const KEYS = {
-  onboarded: 'bussola:onboarded',
-  current: 'bussola:current',
-  saved: 'bussola:saved',
+  onboarded: 'quanto-resta:onboarded',
+  current: 'quanto-resta:current',
+  saved: 'quanto-resta:saved',
 } as const;
 
 function read(key: string): string | null {

@@ -59,7 +59,7 @@ export async function POST(request: Request): Promise<Response> {
   return new Response(new Uint8Array(buffer), {
     headers: {
       'Content-Type': 'application/pdf',
-      'Content-Disposition': `attachment; filename="bussola-${name}.pdf"`,
+      'Content-Disposition': `attachment; filename="quanto-resta-${name}.pdf"`,
       'Cache-Control': 'no-store',
     },
   });

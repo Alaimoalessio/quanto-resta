@@ -71,7 +71,7 @@ export function ScenarioActions({ extra }: { extra?: React.ReactNode }) {
     const csv = monthsToCsv(project(scenario.assumptions, scenario.levers).months);
     downloadBlob(
       new Blob([csv], { type: 'text/csv;charset=utf-8' }),
-      `bussola-${fileName(name)}.csv`,
+      `quanto-resta-${fileName(name)}.csv`,
     );
   };
 
@@ -87,7 +87,7 @@ export function ScenarioActions({ extra }: { extra?: React.ReactNode }) {
         body: JSON.stringify({ s, image }),
       });
       if (!res.ok) throw new Error(await res.text());
-      downloadBlob(await res.blob(), `bussola-${fileName(name)}.pdf`);
+      downloadBlob(await res.blob(), `quanto-resta-${fileName(name)}.pdf`);
       setToast('PDF pronto');
     } catch {
       setToast('PDF non generato: riprova');

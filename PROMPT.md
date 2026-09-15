@@ -12,7 +12,7 @@ L'utente è il **titolare di una piccola attività** (bar, ristorante, negozio, 
 
 In 60 secondi deve poter: scegliere il tipo di attività → confermare o correggere i numeri di partenza (precompilati) → muovere una o più leve → capire, con un grafico e due frasi in italiano, se la scelta lo porta in salvo o nei guai, e quando. Poi salvare o condividere lo scenario con un link e scaricare un riepilogo in PDF.
 
-Il prodotto demo si chiama **"Bussola"**. Il branding deve essere sostituibile cambiando un solo file.
+Il prodotto demo si chiama **"Quanto resta"**. Il branding deve essere sostituibile cambiando un solo file.
 
 ## 2. Stack (vincolante)
 

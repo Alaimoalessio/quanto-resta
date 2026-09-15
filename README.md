@@ -1,6 +1,6 @@
-# Bussola — «cosa succede se» per piccole attività
+# Quanto resta — «cosa succede se» per piccole attività
 
-Bussola è un simulatore di scenari per chi ha un bar, un ristorante, un negozio, una bottega artigiana, uno studio o un e-commerce. Descrivi l'attività con pochi numeri, muovi delle leve (alzo i prezzi, assumo una persona, apro la domenica, compro un macchinario…) e vedi in tempo reale cosa succede alla cassa, al margine e al punto di pareggio nei prossimi 12 o 24 mesi. Poi salvi, condividi con un link o scarichi il riepilogo in PDF.
+Quanto resta è un simulatore di scenari per chi ha un bar, un ristorante, un negozio, una bottega artigiana, uno studio o un e-commerce. Descrivi l'attività con pochi numeri, muovi delle leve (alzo i prezzi, assumo una persona, apro la domenica, compro un macchinario…) e vedi in tempo reale cosa succede alla cassa, al margine e al punto di pareggio nei prossimi 12 o 24 mesi. Poi salvi, condividi con un link o scarichi il riepilogo in PDF.
 
 Non serve un database: lo scenario vive nell'URL (`?s=…`) e gli scenari salvati in `localStorage`.
 
