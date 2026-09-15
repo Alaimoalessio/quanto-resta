@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+
+/* Palette "quotidiano economico": carta, inchiostro, un solo accento. I valori
+   corrispondono a `config/brand.ts`. */
+:root {
+  --paper: #fbfaf6;
+  --surface: #ffffff;
+  --ink: #141a22;
+  --secondary: #5f6772;
+  --border: #e6e2da;
+  --accent: #1f6b4a;
+  --warning: #b7791f;
+  --danger: #b33a2e;
+  --base: #9aa0a8;
+  --accent-soft: #e7f0eb;
+  --warning-soft: #f6eddc;
+  --danger-soft: #f5e3e0;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-secondary: var(--secondary);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-base: var(--base);
+  --color-accent-soft: var(--accent-soft);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger-soft: var(--danger-soft);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-newsreader), ui-serif, Georgia, serif;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: 'cv11', 'ss01';
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 48;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Slider delle leve: traccia sottile con riempimento fino al valore. */
+input[type='range'].lever-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type='range'].lever-range::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(
+    to right,
+    var(--accent) var(--fill, 0%),
+    var(--border) var(--fill, 0%)
+  );
+}
+input[type='range'].lever-range::-moz-range-track {
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(
+    to right,
+    var(--accent) var(--fill, 0%),
+    var(--border) var(--fill, 0%)
+  );
+}
+input[type='range'].lever-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  margin-top: -6.5px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  box-shadow: 0 1px 2px rgb(20 26 34 / 0.15);
+}
+input[type='range'].lever-range::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--accent);
+}
+input[type='range'].lever-range:focus-visible {
+  outline: none;
+}
+input[type='range'].lever-range:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+input[type='range'].lever-range:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.verdict-enter {
+  animation: verdict-fade 300ms ease-out;
+}
+@keyframes verdict-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
